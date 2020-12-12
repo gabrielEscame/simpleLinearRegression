@@ -1,3 +1,4 @@
+#%%
 import matplotlib.pyplot as plt
 from sklearn import datasets
 from sklearn import metrics
@@ -16,9 +17,9 @@ model.fit(x_train, y_train)
 
 predictions = model.predict(x_test)
 
-print(model.score(x_test, y_test), metrics.mean_squared_error(y_test, predictions))
+# print(model.score(x_test, y_test), metrics.mean_squared_error(y_test, predictions))
 
-# plt.scatter(y_test, predictions)
-# plt.xlabel("actual prices") 
-# plt.ylabel("predicted prices")
-# plt.show()
+plt.scatter(y_test, predictions)
+plt.xlabel("actual prices") 
+plt.ylabel("predicted prices")
+plt.show()
